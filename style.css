@@ -1,0 +1,355 @@
+html {
+  scroll-behavior: smooth;
+}
+#body_index {
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+}
+#body_projet {
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+}
+#body_inscription {
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+}
+#body_contact {
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+}
+#body_mentions_legales {
+	background-color: #FFF5E1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+}
+
+header {
+	background-color: #FFD36E;
+	border-radius: 200rem;
+	display: flex;
+	flex: auto;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2.5vh;
+	padding-bottom: 2.5vh;
+}
+header #club_couture {
+	font-family: "Knewave", system-ui;
+  	font-style: normal;
+	font-size: x-large;
+	color: white;
+	text-decoration: none;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	transition: color 0.3s ease;
+}
+header #club_couture:hover {
+	color: #F95C8E;
+}
+header #projet {
+	font-size: x-large;
+	color: white;
+	text-decoration: none;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	transition: color 0.3s ease;
+}
+header #projet:hover {
+	color: #F95C8E;
+}
+header #inscription {
+	font-size: x-large;
+	color: white;
+	text-decoration: none;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	transition: color 0.3s ease;
+}
+header #inscription:hover {
+	color: #F95C8E;
+}
+header #nous_contacter {
+	font-size: x-large;
+	color: white;
+	text-decoration: none;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	transition: color 0.3s ease;
+}
+header #nous_contacter:hover {
+	color: #F95C8E;
+}
+
+footer {
+	background-color: #FFD36E;
+	border-radius: 200px;
+	display: flex;
+    	justify-content: center;
+    	align-items: center;
+	text-align: center;
+}
+footer p {
+	font-size: medium;
+	color: black;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#h1 {
+    width: 35%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#flèche2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 5%;
+}
+
+#le_club_couture {
+	font-family: "Knewave", system-ui;
+  	font-style: normal;
+	color: #A8D5BA;
+	text-align: center;
+	font-size: 500%;
+}
+
+.description_index {
+	background-color: #FFF5E1;
+	border-radius: 7.5rem;
+    	padding-bottom: 2.5px;
+    	padding-top: 2.5px;
+    	margin-top: 10vh;
+    	margin-bottom: 5vh;
+}
+
+.paragraphe_index {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings:
+	"wdth" 100;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 175%;
+}
+
+.texte_centre {
+	display: grid;
+	grid-template-columns: 40% 10% 40%;
+        grid-template-rows: auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+        align-items: center;
+}
+.texte_gauche {
+	display: grid;
+	grid-template-columns: 60% 30%;
+        grid-template-rows: auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+        align-items: center;
+}
+.texte_droite {
+	display: grid;
+	grid-template-columns: 30% 60%;
+        grid-template-rows: auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+        align-items: center;
+}
+.img {
+	width: 100%;
+	border-radius: 5rem;
+}
+
+
+.hyperlien {
+	color: black;
+	text-decoration: underline;
+	transition: text-decoration 0.3s ease-in-out, color 0.3s ease;
+}
+.hyperlien:hover {
+	color: #F95C8E;
+	text-decoration: none;
+}
+
+#projet {
+	font-family: "Knewave", system-ui;
+  	font-style: normal;
+  	color: #A8D5BA;
+	text-align: center;
+	font-size: 500%;
+}
+.description_projet {
+	background-color: #FFF5E1;
+	border-radius: 7.5rem;
+    	padding-bottom: 2.5px;
+    	padding-top: 2.5px;
+    	margin-top: 10vh;
+    	margin-bottom: 5vh;
+}
+.description_projet .texte_gauche {
+	margin-left: 1%;
+}
+.description_projet .texte_droite {
+	margin-left: 5%;
+}
+.paragraphe_projet {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings:
+	"wdth" 100;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 175%;
+}
+
+
+#inscription {
+	font-family: "Knewave", system-ui;
+  	font-style: normal;
+	color: #A8D5BA;
+	text-align: center;
+	font-size: 500%;
+}
+.description_inscription {
+	background-color: #FFF5E1;
+	border-radius: 7.5rem;
+    	padding-bottom: 2.5px;
+    	padding-top: 2.5px;
+    	margin-top: 10vh;
+    	margin-bottom: 5vh;
+}
+.paragraphe_inscription {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings:
+	"wdth" 100;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 175%;
+	text-align: center;
+}
+
+
+#nous_contacter {
+	font-family: "Knewave", system-ui;
+  	font-style: normal;
+	color: #A8D5BA;
+	text-align: center;
+	font-size: 500%;
+}
+.description_contact {
+	background-color: #FFF5E1;
+	border-radius: 7.5rem;
+    	padding-bottom: 2.5px;
+    	padding-top: 2.5px;
+    	margin-top: 10vh;
+    	margin-bottom: 5vh;
+}
+.description_contact .texte_centre {
+	margin-left: 1%;
+}
+.paragraphe_contact {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings:
+	"wdth" 100;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 175%;
+}
+#eclat {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#ou {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings:
+	"wdth" 100;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 175%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#instagram {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.instagram {
+	width: 55%;
+}
+
+
+#mentions_legales {
+	font-family: "Knewave", system-ui;
+  	font-style: normal;
+	color: #A8D5BA;
+	text-align: center;
+	font-size: 500%;
+}
+.description_mentions_legales {
+	background-color: #FFF5E1;
+	border-radius: 7.5rem;
+    	padding-bottom: 2.5px;
+    	padding-top: 2.5px;
+    	margin-top: 10vh;
+    	margin-bottom: 5vh;
+}
+.paragraphe_mentions {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings:
+	"wdth" 100;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    	font-size: 175%;
+}
+.titre_mentions {
+	padding-left: 2.5%;
+    	padding-right: 2.5%;
+    	font-size: 225%;
+}
