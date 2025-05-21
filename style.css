@@ -38,7 +38,7 @@ html {
 }
 
 header {
-	background-color: #FFD36E;
+	background-color: rgba(255, 211, 110, 0.95);
 	border-radius: 200rem;
 	display: flex;
 	flex: auto;
@@ -98,9 +98,42 @@ header #nous_contacter {
 header #nous_contacter:hover {
 	color: #F95C8E;
 }
+header a {
+    position: relative;
+    color: white;
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition pour la couleur */
+}
+header a.hyperlien::after {
+	color: white;
+	background-color: white;
+    content: ""; /* Crée une ligne sous le texte */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur de la ligne */
+    transform: scaleX(1); /* Ligne visible par défaut */
+    transform-origin: left; /* Point de départ de l'animation */
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+header a.hyperlien.active::after {
+	background-color: #F95C8E;
+    color: #F95C8E;
+    transform: scaleX(1); /* Ligne visible pour l'onglet actif */
+}
+header a.hyperlien.active {
+    color: #F95C8E;
+}
+header a:hover {
+    color: #F95C8E; /* Change la couleur du texte au survol */
+}
+header a:hover::after {
+    background-color: #F95C8E; /* Change la couleur de la ligne au survol */
+}
 
 footer {
-	background-color: #FFD36E;
+	background-color: rgba(255, 211, 110, 0.95);
 	border-radius: 200px;
 	display: flex;
     	justify-content: center;
@@ -149,10 +182,9 @@ footer p {
 .paragraphe_index {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	font-weight: normal;
 	font-style: normal;
-	font-variation-settings:
-	"wdth" 100;
+	font-variation-settings: "wdth" 100;
 	padding-left: 5%;
 	padding-right: 5%;
 	font-size: 175%;
@@ -189,13 +221,29 @@ footer p {
 
 
 .hyperlien {
-	color: black;
-	text-decoration: underline;
-	transition: text-decoration 0.3s ease-in-out, color 0.3s ease;
+    position: relative;
+    color: black;
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition pour la couleur */
+}
+.hyperlien::after {
+    content: ""; /* Crée une ligne sous le texte */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: black; /* Couleur de la ligne */
+    transition: transform 0.3s ease; /* Animation de retrait */
+    transform-origin: left; /* Point de départ de l'animation */
+    transform: scaleX(1); /* Ligne visible par défaut */
 }
 .hyperlien:hover {
-	color: #F95C8E;
-	text-decoration: none;
+    color: #F95C8E; /* Change la couleur du texte au survol */
+}
+.hyperlien:hover::after {
+	background-color: #F95C8E;
+    transform: scaleX(0); /* Réduit la ligne à 0 (disparaît) */
 }
 
 #projet {
@@ -222,7 +270,7 @@ footer p {
 .paragraphe_projet {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	font-weight: normal;
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
@@ -250,7 +298,7 @@ footer p {
 .paragraphe_inscription {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	font-weight: normal;
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
@@ -282,7 +330,7 @@ footer p {
 .paragraphe_contact {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	font-weight: normal;
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
@@ -299,7 +347,7 @@ footer p {
 #ou {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	font-weight: normal;
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
@@ -340,7 +388,7 @@ footer p {
 .paragraphe_mentions {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	font-weight: normal;
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
