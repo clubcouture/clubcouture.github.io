@@ -1,5 +1,5 @@
 html {
-  	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 #body_index {
 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
@@ -99,37 +99,37 @@ header #nous_contacter:hover {
 	color: #F95C8E;
 }
 header a {
-    	position: relative;
-    	color: white;
-    	text-decoration: none; /* Supprime le soulignement par défaut */
-    	transition: color 0.3s ease; /* Transition pour la couleur */
+    position: relative;
+    color: white;
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition pour la couleur */
 }
 header a.hyperlien::after {
 	color: white;
 	background-color: white;
-	content: ""; /* Crée une ligne sous le texte */
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2px; /* Épaisseur de la ligne */
-	transform: scaleX(1); /* Ligne visible par défaut */
-	transform-origin: left; /* Point de départ de l'animation */
-	transition: transform 0.3s ease; /* Animation fluide */
+    content: ""; /* Crée une ligne sous le texte */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur de la ligne */
+    transform: scaleX(1); /* Ligne visible par défaut */
+    transform-origin: left; /* Point de départ de l'animation */
+    transition: transform 0.3s ease; /* Animation fluide */
 }
 header a.hyperlien.active::after {
 	background-color: #F95C8E;
-    	color: #F95C8E;
-    	transform: scaleX(1); /* Ligne visible pour l'onglet actif */
+    color: #F95C8E;
+    transform: scaleX(1); /* Ligne visible pour l'onglet actif */
 }
 header a.hyperlien.active {
-    	color: #F95C8E;
+    color: #F95C8E;
 }
 header a:hover {
-    	color: #F95C8E; /* Change la couleur du texte au survol */
+    color: #F95C8E; /* Change la couleur du texte au survol */
 }
 header a:hover::after {
-    	background-color: #F95C8E; /* Change la couleur de la ligne au survol */
+    background-color: #F95C8E; /* Change la couleur de la ligne au survol */
 }
 
 footer {
@@ -148,11 +148,11 @@ footer p {
 }
 
 #h1 {
-    	width: 35%;
-    	text-align: center;
-    	display: block;
-    	margin-left: auto;
-    	margin-right: auto;
+    width: 35%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #flèche2 {
 	display: flex;
@@ -168,6 +168,17 @@ footer p {
 	color: #A8D5BA;
 	text-align: center;
 	font-size: 500%;
+}
+
+.h3 {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: bold;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 200%;
 }
 
 .description_index {
@@ -221,29 +232,29 @@ footer p {
 
 
 .hyperlien {
-	position: relative;
-	color: black;
-	text-decoration: none; /* Supprime le soulignement par défaut */
-	transition: color 0.3s ease; /* Transition pour la couleur */
+    position: relative;
+    color: black;
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition pour la couleur */
 }
 .hyperlien::after {
-	content: ""; /* Crée une ligne sous le texte */
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2px; /* Épaisseur de la ligne */
-	background-color: black; /* Couleur de la ligne */
-	transition: transform 0.3s ease; /* Animation de retrait */
-	transform-origin: left; /* Point de départ de l'animation */
-	transform: scaleX(1); /* Ligne visible par défaut */
+    content: ""; /* Crée une ligne sous le texte */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: black; /* Couleur de la ligne */
+    transition: transform 0.3s ease; /* Animation de retrait */
+    transform-origin: left; /* Point de départ de l'animation */
+    transform: scaleX(1); /* Ligne visible par défaut */
 }
 .hyperlien:hover {
-    	color: #F95C8E; /* Change la couleur du texte au survol */
+    color: #F95C8E; /* Change la couleur du texte au survol */
 }
 .hyperlien:hover::after {
 	background-color: #F95C8E;
-    	transform: scaleX(0); /* Réduit la ligne à 0 (disparaît) */
+    transform: scaleX(0); /* Réduit la ligne à 0 (disparaît) */
 }
 
 #projet {
@@ -347,13 +358,12 @@ footer p {
 #ou {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
-	font-variation-settings:
-	"wdth" 100;
+	font-variation-settings: "wdth" 100;
 	padding-left: 5%;
 	padding-right: 5%;
-	font-size: 175%;
+	font-size: 200%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
