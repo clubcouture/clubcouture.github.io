@@ -1,33 +1,79 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Assure que html et body prennent toute la largeur disponible */
+}
+
 html {
   scroll-behavior: smooth;
 }
 #body_index {
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	position: relative; /* Pour le positionnement du pseudo-élément */
 	color: black;
+	background-color: #f0f0f0; /* Couleur de fond de secours optionnelle */
+}
+
+#body_index::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px); /* Flou réduit */
+    z-index: -1;
 }
 #body_projet {
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	position: relative;
 	color: black;
+	background-color: #f0f0f0; /* Couleur de fond de secours optionnelle */
+}
+
+#body_projet::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px); /* Ajustez la valeur du flou ici */
+    z-index: -1;
 }
 #body_inscription {
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	position: relative;
 	color: black;
+	background-color: #f0f0f0; /* Couleur de fond de secours optionnelle */
+}
+
+#body_inscription::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px); /* Ajustez la valeur du flou ici */
+    z-index: -1;
 }
 #body_contact {
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	position: relative;
 	color: black;
+	background-color: #f0f0f0; /* Couleur de fond de secours optionnelle */
+}
+
+#body_contact::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px); /* Ajustez la valeur du flou ici */
+    z-index: -1;
 }
 #body_mentions_legales {
 	background-color: #FFF5E1;
@@ -38,15 +84,30 @@ html {
 }
 
 header {
-	background-color: rgba(255, 211, 110, 0.95);
-	border-radius: 200rem;
+	background-color: rgba(255, 211, 110, 0.85);
+	border-radius: 0 0 1rem 1rem; /* Conservez votre border-radius actuel ou ajustez-le */
 	display: flex;
-	flex: auto;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding-top: 2.5vh;
-	padding-bottom: 2.5vh;
+	padding-top: 20px; /* Valeur fixe pour un meilleur contrôle de la hauteur */
+	padding-bottom: 20px; /* Valeur fixe pour un meilleur contrôle de la hauteur */
+    
+    position: sticky; /* Rend le header "collant" */
+    top: 0;           /* Se colle en haut de la fenêtre */
+    left: 0;          /* S'étend sur toute la largeur à partir de la gauche */
+    right: 0;         /* S'étend sur toute la largeur jusqu'à la droite */
+    width: 100%;      /* S'assure qu'il prend toute la largeur */
+    z-index: 1020;    /* Au-dessus de la plupart des autres contenus (menu burger nav est à 1000, burger lui-même à 1001) */
+    box-sizing: border-box; /* Pour que padding et border soient inclus dans width: 100% */
+
+    /* Si vous aviez des marges latérales sur le header, vous voudrez peut-être les enlever */
+    margin-left: 0;
+    margin-right: 0;
+    
+    /* Vous pourriez avoir besoin d'ajuster le border-radius si vous ne voulez plus qu'il soit une "pilule" complète */
+    /* Par exemple, pour des coins arrondis uniquement en bas s'il est collé en haut : */
+    /* border-radius: 0 0 20px 20px; */
 }
 header #club_couture {
 	font-family: "Knewave", system-ui;
@@ -133,8 +194,8 @@ header a:hover::after {
 }
 
 footer {
-	background-color: rgba(255, 211, 110, 0.95);
-	border-radius: 200px;
+	background-color: rgba(255, 211, 110, 0.85);
+	border-radius: 1rem 1rem 0 0;
 	display: flex;
     	justify-content: center;
     	align-items: center;
@@ -176,14 +237,14 @@ footer p {
 	font-weight: bold;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 	font-size: 200%;
 }
 
 .description_index {
 	background-color: #FFF5E1;
-	border-radius: 7.5rem;
+	border-radius: 5rem;
     	padding-bottom: 2.5px;
     	padding-top: 2.5px;
     	margin-top: 10vh;
@@ -196,8 +257,8 @@ footer p {
 	font-weight: normal;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 	font-size: 175%;
 }
 
@@ -266,7 +327,7 @@ footer p {
 }
 .description_projet {
 	background-color: #FFF5E1;
-	border-radius: 7.5rem;
+	border-radius: 5rem;
     	padding-bottom: 2.5px;
     	padding-top: 2.5px;
     	margin-top: 10vh;
@@ -285,8 +346,8 @@ footer p {
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 	font-size: 175%;
 }
 
@@ -300,7 +361,7 @@ footer p {
 }
 .description_inscription {
 	background-color: #FFF5E1;
-	border-radius: 7.5rem;
+	border-radius: 5rem;
     	padding-bottom: 2.5px;
     	padding-top: 2.5px;
     	margin-top: 10vh;
@@ -313,8 +374,8 @@ footer p {
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 	font-size: 175%;
 	text-align: center;
 }
@@ -329,7 +390,7 @@ footer p {
 }
 .description_contact {
 	background-color: #FFF5E1;
-	border-radius: 7.5rem;
+	border-radius: 5rem;
     	padding-bottom: 2.5px;
     	padding-top: 2.5px;
     	margin-top: 10vh;
@@ -345,8 +406,8 @@ footer p {
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 	font-size: 175%;
 }
 #eclat {
@@ -378,6 +439,22 @@ footer p {
 .instagram {
 	width: 55%;
 }
+.formulaire-container {
+    width: 100%; /* Ou la largeur que vous souhaitez, ex: 900px */
+    max-width: 95%; /* Limite la largeur maximale */
+    margin: 1% auto; /* Centre le formulaire et ajoute de l'espace au-dessus/dessous */
+    border-radius: 1rem; /* C'est ici que vous arrondissez les coins ! */
+    overflow: hidden; /* TRÈS IMPORTANT : cela "coupe" le contenu de l'iframe aux bords arrondis du conteneur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre portée pour un effet de profondeur */
+    /* Si vous voulez une bordure visible autour du formulaire arrondi : */
+    /* border: 1px solid #ccc; */
+}
+/* Assurer que l'iframe remplit bien son conteneur parent */
+.formulaire-container iframe {
+    width: 100%;
+    height: 1000px; /* Assurez-vous que cette hauteur correspond à celle dans le HTML ou est suffisante */
+    display: block; /* Enlève les espaces en dessous si l'iframe est inline par défaut */
+}
 
 
 #mentions_legales {
@@ -389,7 +466,7 @@ footer p {
 }
 .description_mentions_legales {
 	background-color: #FFF5E1;
-	border-radius: 7.5rem;
+	border-radius: 5rem;
     	padding-bottom: 2.5px;
     	padding-top: 2.5px;
     	margin-top: 10vh;
@@ -402,8 +479,8 @@ footer p {
 	font-style: normal;
 	font-variation-settings:
 	"wdth" 100;
-    	padding-left: 5%;
-    	padding-right: 5%;
+    	padding-left: 2.5%;
+    	padding-right: 2.5%;
     	font-size: 175%;
 }
 .titre_mentions {
