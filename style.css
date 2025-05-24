@@ -1,12 +1,22 @@
-html, body {
+html {
+    height: 100%; /* Essentiel pour que min-height: 100vh sur body fonctionne correctement */
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    width: 100%; /* Assure que html et body prennent toute la largeur disponible */
 }
 
-html {
-  scroll-behavior: smooth;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Le corps prend au moins toute la hauteur de la fenêtre */
+    margin: 0;
+    padding: 0; /* Retrait du padding-bottom ici */
+    width: 100%;
+    /* Conservez ici vos styles de fond pour le body si #body_index, etc. ne couvrent pas tout */
+    /* Par exemple, si vous voulez un fond général pour body avant que les ::before ne s'appliquent : */
+    /* background-color: #f0f0f0; */
 }
+
 #body_index {
 	position: relative; /* Pour le positionnement du pseudo-élément */
 	color: black;
@@ -90,8 +100,7 @@ header {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding-top: 20px; /* Valeur fixe pour un meilleur contrôle de la hauteur */
-	padding-bottom: 20px; /* Valeur fixe pour un meilleur contrôle de la hauteur */
+	padding: 20px; /* Valeur fixe pour un meilleur contrôle de la hauteur */
     
     position: sticky; /* Rend le header "collant" */
     top: 0;           /* Se colle en haut de la fenêtre */
@@ -194,12 +203,16 @@ header a:hover::after {
 }
 
 footer {
-	background-color: rgba(255, 211, 110, 0.85);
-	border-radius: 1rem 1rem 0 0;
+	background-color: rgba(255, 211, 110, 0.95);
+	border-radius: 20px 20px 0 0; /* Optionnel: arrondir les coins supérieurs */
 	display: flex;
-    	justify-content: center;
-    	align-items: center;
+    justify-content: center;
+    align-items: center;
 	text-align: center;
+	padding: 5px 0; /* Un peu plus de padding peut-être */
+    width: 100%; /* S'assure qu'il prend toute la largeur */
+    box-sizing: border-box;
+    /* margin-top: auto; /* Alternative pour pousser le footer en bas dans certains contextes flex, mais flex:1 sur le contenu est plus courant */
 }
 footer p {
 	font-size: medium;
@@ -245,10 +258,10 @@ footer p {
 .description_index {
 	background-color: #FFF5E1;
 	border-radius: 5rem;
-    	padding-bottom: 2.5px;
-    	padding-top: 2.5px;
-    	margin-top: 10vh;
-    	margin-bottom: 5vh;
+	padding-bottom: 2.5px;
+	padding-top: 2.5px;
+	margin-top: 15vh;
+	margin-bottom: 5vh;
 }
 
 .paragraphe_index {
@@ -265,26 +278,26 @@ footer p {
 .texte_centre {
 	display: grid;
 	grid-template-columns: 40% 10% 40%;
-        grid-template-rows: auto;
-        grid-column-gap: 30px;
-        grid-row-gap: 20px;
-        align-items: center;
+	grid-template-rows: auto;
+	grid-column-gap: 30px;
+	grid-row-gap: 20px;
+	align-items: center;
 }
 .texte_gauche {
 	display: grid;
 	grid-template-columns: 60% 30%;
-        grid-template-rows: auto;
-        grid-column-gap: 30px;
-        grid-row-gap: 20px;
-        align-items: center;
+	grid-template-rows: auto;
+	grid-column-gap: 30px;
+	grid-row-gap: 20px;
+	align-items: center;
 }
 .texte_droite {
 	display: grid;
 	grid-template-columns: 30% 60%;
-        grid-template-rows: auto;
-        grid-column-gap: 30px;
-        grid-row-gap: 20px;
-        align-items: center;
+	grid-template-rows: auto;
+	grid-column-gap: 30px;
+	grid-row-gap: 20px;
+	align-items: center;
 }
 .img {
 	width: 100%;
@@ -328,10 +341,10 @@ footer p {
 .description_projet {
 	background-color: #FFF5E1;
 	border-radius: 5rem;
-    	padding-bottom: 2.5px;
-    	padding-top: 2.5px;
-    	margin-top: 10vh;
-    	margin-bottom: 5vh;
+	padding-bottom: 2.5px;
+	padding-top: 2.5px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 }
 .description_projet .texte_gauche {
 	margin-left: 1%;
@@ -362,10 +375,10 @@ footer p {
 .description_inscription {
 	background-color: #FFF5E1;
 	border-radius: 5rem;
-    	padding-bottom: 2.5px;
-    	padding-top: 2.5px;
-    	margin-top: 10vh;
-    	margin-bottom: 5vh;
+	padding-bottom: 2.5px;
+	padding-top: 2.5px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 }
 .paragraphe_inscription {
 	font-family: "Roboto", sans-serif;
@@ -391,10 +404,10 @@ footer p {
 .description_contact {
 	background-color: #FFF5E1;
 	border-radius: 5rem;
-    	padding-bottom: 2.5px;
-    	padding-top: 2.5px;
-    	margin-top: 10vh;
-    	margin-bottom: 5vh;
+	padding-bottom: 2.5px;
+	padding-top: 2.5px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 }
 .description_contact .texte_centre {
 	margin-left: 1%;
@@ -467,24 +480,27 @@ footer p {
 .description_mentions_legales {
 	background-color: #FFF5E1;
 	border-radius: 5rem;
-    	padding-bottom: 2.5px;
-    	padding-top: 2.5px;
-    	margin-top: 10vh;
-    	margin-bottom: 5vh;
+	padding-bottom: 2.5px;
+	padding-top: 2.5px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 }
 .paragraphe_mentions {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
 	font-style: normal;
-	font-variation-settings:
-	"wdth" 100;
-    	padding-left: 2.5%;
-    	padding-right: 2.5%;
-    	font-size: 175%;
+	font-variation-settings: "wdth" 100;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    font-size: 175%;
 }
 .titre_mentions {
 	padding-left: 2.5%;
-    	padding-right: 2.5%;
-    	font-size: 225%;
+    padding-right: 2.5%;
+    font-size: 225%;
+}
+
+.main-content-area {
+    flex: 1;
 }
