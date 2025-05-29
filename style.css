@@ -104,7 +104,6 @@ header {
 	justify-content: center;
 	align-items: center;
 	padding: 20px; /* Valeur fixe pour un meilleur contrôle de la hauteur */
-    
     position: sticky; /* Rend le header "collant" */
     top: 0;           /* Se colle en haut de la fenêtre */
     left: 0;          /* S'étend sur toute la largeur à partir de la gauche */
@@ -112,11 +111,9 @@ header {
     width: 100%;      /* S'assure qu'il prend toute la largeur */
     z-index: 1020;    /* Au-dessus de la plupart des autres contenus (menu burger nav est à 1000, burger lui-même à 1001) */
     box-sizing: border-box; /* Pour que padding et border soient inclus dans width: 100% */
-
     /* Si vous aviez des marges latérales sur le header, vous voudrez peut-être les enlever */
     margin-left: 0;
     margin-right: 0;
-    
     /* Vous pourriez avoir besoin d'ajuster le border-radius si vous ne voulez plus qu'il soit une "pilule" complète */
     /* Par exemple, pour des coins arrondis uniquement en bas s'il est collé en haut : */
     /* border-radius: 0 0 20px 20px; */
@@ -214,6 +211,7 @@ footer {
 	text-align: center;
 	padding: 5px 0; /* Un peu plus de padding peut-être */
     width: 100%; /* S'assure qu'il prend toute la largeur */
+	margin-bottom: 0; /* Enlève le margin-bottom pour éviter l'espace supplémentaire */
     box-sizing: border-box;
     /* margin-top: auto; /* Alternative pour pousser le footer en bas dans certains contextes flex, mais flex:1 sur le contenu est plus courant */
 }
@@ -260,11 +258,10 @@ footer p {
 
 .description_index {
 	background-color: #FFF5E1;
-	border-radius: 5rem;
+	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
 	padding-top: 2.5px;
 	margin-top: 15vh;
-	margin-bottom: 5vh;
 }
 
 .paragraphe_index {
@@ -343,11 +340,10 @@ footer p {
 }
 .description_projet {
 	background-color: #FFF5E1;
-	border-radius: 5rem;
+	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
 	padding-top: 2.5px;
 	margin-top: 5vh;
-	margin-bottom: 5vh;
 }
 .description_projet .texte_gauche {
 	margin-left: 1%;
@@ -377,11 +373,10 @@ footer p {
 }
 .description_inscription {
 	background-color: #FFF5E1;
-	border-radius: 5rem;
+	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
 	padding-top: 2.5px;
 	margin-top: 5vh;
-	margin-bottom: 5vh;
 }
 .paragraphe_inscription {
 	font-family: "Roboto", sans-serif;
@@ -406,11 +401,10 @@ footer p {
 }
 .description_contact {
 	background-color: #FFF5E1;
-	border-radius: 5rem;
+	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
 	padding-top: 2.5px;
 	margin-top: 5vh;
-	margin-bottom: 5vh;
 }
 .description_contact .texte_centre {
 	margin-left: 1%;
@@ -482,11 +476,10 @@ footer p {
 }
 .description_mentions_legales {
 	background-color: #FFF5E1;
-	border-radius: 5rem;
+	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
 	padding-top: 2.5px;
 	margin-top: 5vh;
-	margin-bottom: 5vh;
 }
 .paragraphe_mentions {
 	font-family: "Roboto", sans-serif;
