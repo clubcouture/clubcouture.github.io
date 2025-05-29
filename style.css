@@ -204,15 +204,14 @@ header a:hover::after {
 
 footer {
 	background-color: rgba(255, 211, 110, 0.95);
-	border-radius: 20px 20px 0 0; /* Optionnel: arrondir les coins supérieurs */
 	display: flex;
     justify-content: center;
     align-items: center;
 	text-align: center;
+	position: relative;
+	bottom: 0;
 	padding: 5px 0; /* Un peu plus de padding peut-être */
     width: 100%; /* S'assure qu'il prend toute la largeur */
-	
-    margin-top: 5vh; /* Pour laisser de l'espace en haut de la page */
 	margin-bottom: 0; /* Enlève le margin-bottom pour éviter l'espace supplémentaire */
     box-sizing: border-box;
     /* margin-top: auto; /* Alternative pour pousser le footer en bas dans certains contextes flex, mais flex:1 sur le contenu est plus courant */
