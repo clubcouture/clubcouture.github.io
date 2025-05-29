@@ -112,7 +112,6 @@ header {
     z-index: 1020;    /* Au-dessus de la plupart des autres contenus (menu burger nav est à 1000, burger lui-même à 1001) */
     box-sizing: border-box; /* Pour que padding et border soient inclus dans width: 100% */
     /* Si vous aviez des marges latérales sur le header, vous voudrez peut-être les enlever */
-    margin-top: 5vh; /* Pour laisser de l'espace en haut de la page */
 	margin-left: 0;
     margin-right: 0;
     /* Vous pourriez avoir besoin d'ajuster le border-radius si vous ne voulez plus qu'il soit une "pilule" complète */
@@ -212,6 +211,8 @@ footer {
 	text-align: center;
 	padding: 5px 0; /* Un peu plus de padding peut-être */
     width: 100%; /* S'assure qu'il prend toute la largeur */
+	
+    margin-top: 5vh; /* Pour laisser de l'espace en haut de la page */
 	margin-bottom: 0; /* Enlève le margin-bottom pour éviter l'espace supplémentaire */
     box-sizing: border-box;
     /* margin-top: auto; /* Alternative pour pousser le footer en bas dans certains contextes flex, mais flex:1 sur le contenu est plus courant */
