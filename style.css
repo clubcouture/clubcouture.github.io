@@ -213,6 +213,7 @@ footer {
 	padding: 5px 0; /* Un peu plus de padding peut-être */
     width: 100%; /* S'assure qu'il prend toute la largeur */
 	margin-bottom: 0; /* Enlève le margin-bottom pour éviter l'espace supplémentaire */
+	border-radius: 1rem 1rem 0 0; /* Arrondit les coins supérieurs */
     box-sizing: border-box;
     /* margin-top: auto; /* Alternative pour pousser le footer en bas dans certains contextes flex, mais flex:1 sur le contenu est plus courant */
 }
@@ -425,6 +426,7 @@ footer p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	text-align: center;
 	align-items: center;
 }
 #ou {
@@ -439,12 +441,14 @@ footer p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	text-align: center;
 	align-items: center;
 }
 #instagram {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	text-align: center;
 	align-items: center;
 }
 .instagram {
