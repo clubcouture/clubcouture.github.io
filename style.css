@@ -322,10 +322,10 @@ footer p {
 	/* Comportement des images */
 	width: 100%;
 	border-radius: 5rem;
+	transition: transform 0.3s ease; /* Transition fluide */
 }
 .img:hover {
 	/* Effet de zoom sur les images au survol */
-	transition: transform 0.3s ease; /* Transition fluide */
 	transform: scale(1.05); /* Zoom léger */
 }
 
