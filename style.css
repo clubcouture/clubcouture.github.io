@@ -325,8 +325,8 @@ footer p {
 }
 .img:hover {
 	/* Effet de zoom sur les images au survol */
-	transform: scale(1.05); /* Zoom léger */
 	transition: transform 0.3s ease; /* Transition fluide */
+	transform: scale(1.05); /* Zoom léger */
 }
 
 /* Comportement des liens avec soulignement animé */
