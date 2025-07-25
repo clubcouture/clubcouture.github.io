@@ -321,7 +321,7 @@ footer p {
 .img {
 	/* Comportement des images */
 	width: 100%;
-	border-radius: 5rem;
+	border-radius: 5rem; /* Arrondit les coins */
 	transition: transform 0.3s ease; /* Transition fluide */
 }
 .img:hover {
