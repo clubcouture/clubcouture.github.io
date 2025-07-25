@@ -1,75 +1,81 @@
 html {
-    height: 100%; /* Essentiel pour que min-height: 100vh sur body fonctionne correctement */
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    -webkit-text-size-adjust: 100%; /* Empêche l'ajustement automatique sur WebKit */
-    -ms-text-size-adjust: 100%; /* Empêche l'ajustement automatique sur IE/Edge */
-    text-size-adjust: 100%; /* Empêche l'ajustement automatique standard */
+	height: 100%; /* Essentiel pour que min-height: 100vh sur body fonctionne correctement */
+	scroll-behavior: smooth; /* Pour un défilement fluide */
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: 100%; /* Empêche l'ajustement automatique sur WebKit */
+	-ms-text-size-adjust: 100%; /* Empêche l'ajustement automatique sur IE/Edge */
+	text-size-adjust: 100%; /* Empêche l'ajustement automatique standard */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Le corps prend au moins toute la hauteur de la fenêtre */
-    margin: 0;
-    padding: 0; /* Retrait du padding-bottom ici */
-    width: 100%;
-    /* Conservez ici vos styles de fond pour le body si #body_index, etc. ne couvrent pas tout */
-    /* Par exemple, si vous voulez un fond général pour body avant que les ::before ne s'appliquent : */
-    /* background-color: #f0f0f0; */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; /* Le corps prend au moins toute la hauteur de la fenêtre */
+	margin: 0;
+	padding: 0; /* Retrait du padding-bottom ici */
+	width: 100%;
+	/* Conservez ici vos styles de fond pour le body si #body_index, etc. ne couvrent pas tout */
+	/* Par exemple, si vous voulez un fond général pour body avant que les ::before ne s'appliquent : */
+	/* background-color: #f0f0f0; */
 }
 
 #body_index {
+	/* Fond et couleur pour la page d'accueil */
 	position: relative; /* Pour le positionnement du pseudo-élément */
 	color: black;
 	background-color: #f0f0f0; /* Couleur de fond de secours optionnelle */
 }
 
 #body_index::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: blur(2px); /* Flou réduit */
-    z-index: -1;
+	/* Superpose un dégradé sombre et une image de fond floutée */
+	content: "";
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	filter: blur(2px); /* Flou réduit */
+	z-index: -1;
 }
 #body_projet {
+	/* Fond et couleur pour la page projet */
 	position: relative;
 	color: black;
 	background-color: #f0f0f0; /* Couleur de fond de secours optionnelle */
 }
 
 #body_projet::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: blur(2px); /* Ajustez la valeur du flou ici */
-    z-index: -1;
+	/* Superpose un dégradé sombre et une image de fond floutée */
+	content: "";
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	filter: blur(2px); /* Ajustez la valeur du flou ici */
+	z-index: -1;
 }
 #body_inscription {
+	/* Fond et couleur pour la page inscription */
 	position: relative;
 	color: black;
 	background-color: #f0f0f0; /* Couleur de fond de secours optionnelle */
 }
 
 #body_inscription::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: blur(2px); /* Ajustez la valeur du flou ici */
-    z-index: -1;
+	/* Superpose un dégradé sombre et une image de fond floutée */
+	content: "";
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("data/img/pattern-8940646_1280.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	filter: blur(2px); /* Ajustez la valeur du flou ici */
+	z-index: -1;
 }
 #body_contact {
 	position: relative;
@@ -119,19 +125,20 @@ header {
     /* border-radius: 0 0 20px 20px; */
 }
 header #club_couture {
-	font-family: "Knewave", system-ui;
-  	font-style: normal;
+	font-family: "Knewave", system-ui; /* Police décorative */
+	font-style: normal;
 	font-size: x-large;
 	color: white;
 	text-decoration: none;
 	display: block;
 	margin-left: 5%;
 	margin-right: 5%;
-	transition: color 0.3s ease;
+	transition: color 0.3s ease; /* Animation couleur au survol */
 }
 header #club_couture:hover {
-	color: #F95C8E;
+	color: #F95C8E; /* Rose au survol */
 }
+/* Lien projet dans le header */
 header #projet {
 	font-size: x-large;
 	color: white;
@@ -144,6 +151,7 @@ header #projet {
 header #projet:hover {
 	color: #F95C8E;
 }
+/* Lien inscription dans le header */
 header #inscription {
 	font-size: x-large;
 	color: white;
@@ -156,6 +164,7 @@ header #inscription {
 header #inscription:hover {
 	color: #F95C8E;
 }
+/* Lien contact dans le header */
 header #nous_contacter {
 	font-size: x-large;
 	color: white;
@@ -168,55 +177,57 @@ header #nous_contacter {
 header #nous_contacter:hover {
 	color: #F95C8E;
 }
+/* Liens du header (général) */
 header a {
-    position: relative;
-    color: white;
-    text-decoration: none; /* Supprime le soulignement par défaut */
-    transition: color 0.3s ease; /* Transition pour la couleur */
+	position: relative;
+	color: white;
+	text-decoration: none; /* Supprime le soulignement par défaut */
+	transition: color 0.3s ease; /* Transition pour la couleur */
 }
+/* Soulignement animé pour les liens du header */
 header a.hyperlien::after {
 	color: white;
 	background-color: white;
-    content: ""; /* Crée une ligne sous le texte */
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px; /* Épaisseur de la ligne */
-    transform: scaleX(1); /* Ligne visible par défaut */
-    transform-origin: left; /* Point de départ de l'animation */
-    transition: transform 0.3s ease; /* Animation fluide */
+	content: ""; /* Crée une ligne sous le texte */
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px; /* Épaisseur de la ligne */
+	transform: scaleX(1); /* Ligne visible par défaut */
+	transform-origin: left; /* Point de départ de l'animation */
+	transition: transform 0.3s ease; /* Animation fluide */
 }
 header a.hyperlien.active::after {
-	background-color: #F95C8E;
-    color: #F95C8E;
-    transform: scaleX(1); /* Ligne visible pour l'onglet actif */
+	background-color: #F95C8E; /* Ligne rose pour l'onglet actif */
+	color: #F95C8E;
+	transform: scaleX(1); /* Ligne visible pour l'onglet actif */
 }
 header a.hyperlien.active {
-    color: #F95C8E;
+	color: #F95C8E; /* Texte rose pour l'onglet actif */
 }
 header a:hover {
-    color: #F95C8E; /* Change la couleur du texte au survol */
+	color: #F95C8E; /* Change la couleur du texte au survol */
 }
 header a:hover::after {
-    background-color: #F95C8E; /* Change la couleur de la ligne au survol */
+	background-color: #F95C8E; /* Change la couleur de la ligne au survol */
 }
 
 footer {
 	background-color: rgba(255, 211, 110, 0.95);
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	position: relative;
 	bottom: 0;
-	padding: 5px 0; /* Un peu plus de padding peut-être */
-    width: 100%; /* S'assure qu'il prend toute la largeur */
+	padding: 5px 0;
+	width: 100%; /* S'assure qu'il prend toute la largeur */
 	margin-bottom: 0; /* Enlève le margin-bottom pour éviter l'espace supplémentaire */
-    box-sizing: border-box;
-    /* margin-top: auto; /* Alternative pour pousser le footer en bas dans certains contextes flex, mais flex:1 sur le contenu est plus courant */
+	box-sizing: border-box; /* Pour que padding et border soient inclus dans width: 100% */
 }
 footer p {
+	/* Texte du footer */
 	font-size: medium;
 	color: black;
 	padding-left: 10px;
@@ -224,11 +235,12 @@ footer p {
 }
 
 #h1 {
-    width: 35%;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	/* Comportement du titre principal */
+	width: 35%;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 #flèche2 {
 	display: flex;
@@ -240,13 +252,14 @@ footer p {
 
 #le_club_couture {
 	font-family: "Knewave", system-ui;
-  	font-style: normal;
+	font-style: normal;
 	color: #A8D5BA;
 	text-align: center;
 	font-size: 500%;
 }
 
 .h3 {
+	/* Comportement du h3 */
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: bold;
@@ -258,6 +271,7 @@ footer p {
 }
 
 .description_index {
+	/* Affichage de la description dans la page d'accueil */
 	background-color: #FFF5E1;
 	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
@@ -266,6 +280,7 @@ footer p {
 }
 
 .paragraphe_index {
+	/* Comportement du paragraphe dans la page d'accueil */
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
@@ -277,6 +292,7 @@ footer p {
 }
 
 .texte_centre {
+	/* Comportement du texte centré */
 	display: grid;
 	grid-template-columns: 40% 10% 40%;
 	grid-template-rows: auto;
@@ -285,6 +301,7 @@ footer p {
 	align-items: center;
 }
 .texte_gauche {
+	/* Comportement du texte à gauche */
 	display: grid;
 	grid-template-columns: 60% 30%;
 	grid-template-rows: auto;
@@ -293,6 +310,7 @@ footer p {
 	align-items: center;
 }
 .texte_droite {
+	/* Comportement du texte à droite */
 	display: grid;
 	grid-template-columns: 30% 60%;
 	grid-template-rows: auto;
@@ -301,45 +319,53 @@ footer p {
 	align-items: center;
 }
 .img {
+	/* Comportement des images */
 	width: 100%;
 	border-radius: 5rem;
 }
+.img:hover {
+	/* Effet de zoom sur les images au survol */
+	transform: scale(1.05); /* Zoom léger */
+	transition: transform 0.3s ease; /* Transition fluide */
+}
 
-
+/* Comportement des liens avec soulignement animé */
 .hyperlien {
-    position: relative;
-    color: black;
-    text-decoration: none; /* Supprime le soulignement par défaut */
-    transition: color 0.3s ease; /* Transition pour la couleur */
+	position: relative;
+	color: black;
+	text-decoration: none; /* Supprime le soulignement par défaut */
+	transition: color 0.3s ease; /* Transition pour la couleur */
 }
 .hyperlien::after {
-    content: ""; /* Crée une ligne sous le texte */
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px; /* Épaisseur de la ligne */
-    background-color: black; /* Couleur de la ligne */
-    transition: transform 0.3s ease; /* Animation de retrait */
-    transform-origin: left; /* Point de départ de l'animation */
-    transform: scaleX(1); /* Ligne visible par défaut */
+	content: ""; /* Crée une ligne sous le texte */
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px; /* Épaisseur de la ligne */
+	background-color: black; /* Couleur de la ligne */
+	transition: transform 0.3s ease; /* Animation de retrait */
+	transform-origin: left; /* Point de départ de l'animation */
+	transform: scaleX(1); /* Ligne visible par défaut */
 }
 .hyperlien:hover {
-    color: #F95C8E; /* Change la couleur du texte au survol */
+	color: #F95C8E; /* Change la couleur du texte au survol */
 }
 .hyperlien:hover::after {
 	background-color: #F95C8E;
-    transform: scaleX(0); /* Réduit la ligne à 0 (disparaît) */
+	transform: scaleX(0); /* Réduit la ligne à 0 (disparaît) */
 }
 
 #projet {
+	/* Comportement du titre de la section projet */
 	font-family: "Knewave", system-ui;
-  	font-style: normal;
-  	color: #A8D5BA;
+	font-style: normal;
+	color: #A8D5BA;
 	text-align: center;
 	font-size: 500%;
 }
 .description_projet {
+	/* Affichage de la description dans la section projet */
 	background-color: #FFF5E1;
 	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
@@ -353,6 +379,7 @@ footer p {
 	margin-left: 5%;
 }
 .paragraphe_projet {
+	/* Comportement du paragraphe dans la section projet */
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
@@ -366,13 +393,15 @@ footer p {
 
 
 #inscription {
+	/* Comportement du titre de la section inscription */
 	font-family: "Knewave", system-ui;
-  	font-style: normal;
+	font-style: normal;
 	color: #A8D5BA;
 	text-align: center;
 	font-size: 500%;
 }
 .description_inscription {
+	/* Affichage de la description dans la section inscription */
 	background-color: #FFF5E1;
 	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
@@ -380,6 +409,7 @@ footer p {
 	margin-top: 5vh;
 }
 .paragraphe_inscription {
+	/* Comportement du paragraphe dans la section inscription */
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
@@ -394,13 +424,15 @@ footer p {
 
 
 #nous_contacter {
+	/* Comportement du titre de la section contact */
 	font-family: "Knewave", system-ui;
-  	font-style: normal;
+	font-style: normal;
 	color: #A8D5BA;
 	text-align: center;
 	font-size: 500%;
 }
 .description_contact {
+	/* Affichage de la description dans la section contact */
 	background-color: #FFF5E1;
 	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
@@ -411,6 +443,7 @@ footer p {
 	margin-left: 1%;
 }
 .paragraphe_contact {
+	/* Comportement du paragraphe dans la section contact */
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
@@ -422,6 +455,7 @@ footer p {
 	font-size: 175%;
 }
 #eclat {
+	/* Comportement de la section "eclat" */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -429,6 +463,7 @@ footer p {
 	align-items: center;
 }
 #ou {
+	/* Comportement de la section "ou" */
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: bold;
@@ -444,6 +479,7 @@ footer p {
 	align-items: center;
 }
 #instagram {
+	/* Comportement de la section "instagram" */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -454,31 +490,33 @@ footer p {
 	width: 55%;
 }
 .formulaire-container {
-    width: 100%; /* Ou la largeur que vous souhaitez, ex: 900px */
-    max-width: 95%; /* Limite la largeur maximale */
-    margin: 1% auto; /* Centre le formulaire et ajoute de l'espace au-dessus/dessous */
-    border-radius: 1rem; /* C'est ici que vous arrondissez les coins ! */
-    overflow: hidden; /* TRÈS IMPORTANT : cela "coupe" le contenu de l'iframe aux bords arrondis du conteneur */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre portée pour un effet de profondeur */
-    /* Si vous voulez une bordure visible autour du formulaire arrondi : */
-    /* border: 1px solid #ccc; */
+	width: 100%; /* Ou la largeur que vous souhaitez, ex: 900px */
+	max-width: 95%; /* Limite la largeur maximale */
+	margin: 1% auto; /* Centre le formulaire et ajoute de l'espace au-dessus/dessous */
+	border-radius: 1rem; /* C'est ici que vous arrondissez les coins ! */
+	overflow: hidden; /* TRÈS IMPORTANT : cela "coupe" le contenu de l'iframe aux bords arrondis du conteneur */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre portée pour un effet de profondeur */
+	/* Si vous voulez une bordure visible autour du formulaire arrondi : */
+	/* border: 1px solid #ccc; */
 }
 /* Assurer que l'iframe remplit bien son conteneur parent */
 .formulaire-container iframe {
-    width: 100%;
-    height: 1000px; /* Assurez-vous que cette hauteur correspond à celle dans le HTML ou est suffisante */
-    display: block; /* Enlève les espaces en dessous si l'iframe est inline par défaut */
+	width: 100%;
+	height: 1000px; /* Assurez-vous que cette hauteur correspond à celle dans le HTML ou est suffisante */
+	display: block; /* Enlève les espaces en dessous si l'iframe est inline par défaut */
 }
 
 
 #mentions_legales {
+	/* Comportement du titre de la mentions légales */
 	font-family: "Knewave", system-ui;
-  	font-style: normal;
+	font-style: normal;
 	color: #A8D5BA;
 	text-align: center;
 	font-size: 500%;
 }
 .description_mentions_legales {
+	/* Affichiage de la description des mentions légales */
 	background-color: #FFF5E1;
 	border-radius: 5rem 5rem 0 0; /* Arrondit les coins supérieurs */
 	padding-bottom: 2.5px;
@@ -486,21 +524,22 @@ footer p {
 	margin-top: 5vh;
 }
 .paragraphe_mentions {
+	/* Comportement du paragraphe dans les mentions légales */
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    font-size: 175%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	font-size: 175%;
 }
 .titre_mentions {
 	padding-left: 2.5%;
-    padding-right: 2.5%;
-    font-size: 225%;
+	padding-right: 2.5%;
+	font-size: 225%;
 }
 
 .main-content-area {
-    flex: 1;
+	flex: 1;
 }
